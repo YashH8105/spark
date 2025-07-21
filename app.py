@@ -10,7 +10,7 @@ HTML_TEMPLATE = """
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simple Login</title>
+    <title>Login page</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="/static/style.css">
 </head>
