@@ -3,12 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Flask App</title>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-    <p>This page was rendered from an HTML file using Flask.</p>
+    <div class="form-container">
+        <h2>Login</h2>
+
+        <!-- Display flashed messages -->
+      
+
+        <form action="/login" method="post">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <p class="extra-link">Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+    <!-- Link to the same external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Register</h2>
+
+        <!-- Display flashed messages -->
+        
+
+        <form action="/register" method="post">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password"
+                required>
+            <input type="submit" value="Register">
+        </form>
+        <p class="extra-link">Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+</body>
+
+</html>
