@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+    <!-- Correctly links to the CSS file in the 'static' folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register</h2>
+        
+        <!-- This block displays flashed messages (e.g., 'Passwords do not match') -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <p class="message">{{ messages[0] }}</p>
+            {% endif %}
+        {% endwith %}
+
+        <!-- The form action now correctly points to the 'register' function -->
+        <form action="{{ url_for('register') }}" method="post">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+            <input type="submit" value="Register">
+        </form>
+        
+        <!-- The link back to the login page uses url_for for correctness -->
+        <p class="extra-link">Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+    </div>
+</body>
+</html>
